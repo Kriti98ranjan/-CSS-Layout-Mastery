@@ -1,0 +1,164 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #efefef;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/*header and menu section*/
+
+.top{
+    display: flex;
+    gap: 12px;
+}
+
+.header{
+    flex: 1;
+    background: #363d4a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 2rem;
+}
+
+.menu{
+    flex: 3;
+    background: #341111;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100px;
+    font-size: 2rem;
+}
+
+/*hero area*/
+
+.hero{
+    background: #35b3bf;
+    color: white;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+/*main content and sidebar layout using grod*/
+
+.content{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 12px;
+}
+
+.main{
+    background: #041f4b;
+    color: white;
+    min-height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+/*right side blocks*/
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.image-box{
+    flex:1;
+    background: #576e6e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.extra-box{
+    flex:1;
+    background: #1d5342;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+/*bottom banner section*/
+
+.banner{
+    background: #ab810f;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+
+
+/*tablet view adjustment*/
+
+@media(max-width: 768px){
+    .hero{
+        height: 250px;
+    }
+
+    .content{
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar{
+        flex-direction: row;
+    }
+
+    .image-box,
+    .extra-box{
+        height: 120px;
+    }
+}
+
+/*mobile view adjustment*/
+
+@media (max-width:480px){
+    .top{
+        flex-direction: column;
+    }
+
+    .hero{
+        height:200px;
+        font-size: 2rem;
+    }
+
+    .main{
+        min-height: 180px;
+        font-size: 2rem;
+    }
+
+    .sidebar{
+        flex-direction: column;
+    }
+
+    .header,.menu,.banner{
+        height: 80px;
+    }
+}
